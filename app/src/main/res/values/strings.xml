@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">Calculator</string>
+    <string name="simple">Simple</string>
+    <string name="advanced">Advanced</string>
+    <string name="calculator">Calculator</string>
+    <string name="back">back</string>
+    <string name="c">C</string>
+    <string name="divide">/</string>
+    <string name="sub">-</string>
+    <string name="add">+</string>
+    <string name="multiply">*</string>
+    <string name="equals">=</string>
+</resources>
