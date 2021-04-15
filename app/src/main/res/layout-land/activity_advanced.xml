@@ -8,9 +8,9 @@
     <TextView android:id="@+id/expressionTextView"
               android:layout_width="match_parent"
               android:layout_height="wrap_content"
-              android:scrollHorizontally="false"
               android:text=""
-              android:maxLines="3"
+              android:scrollHorizontally="false"
+              android:maxLines="2"
               android:ellipsize="end"
               android:textSize="40sp"
               android:gravity="end"
@@ -33,8 +33,9 @@
                   android:orientation="vertical"
                   android:gravity="bottom">
 
+
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="80dp"
+                      android:layout_height="50dp"
                       android:orientation="horizontal"
                       android:background="@color/colorWhite">
 
@@ -42,9 +43,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="7"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -53,9 +54,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="8"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -64,9 +65,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="9"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -75,9 +76,58 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onOperator"
-                    android:text="*"
+                    android:text="@string/multiply"
                     android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="sin"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/sqrtButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="sqrt"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="x^2"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="log"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorAccent">
 
@@ -86,7 +136,7 @@
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="80dp"
+                      android:layout_height="50dp"
                       android:orientation="horizontal"
                       android:background="@color/colorWhite">
 
@@ -94,9 +144,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="4"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -105,9 +155,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="5"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -116,9 +166,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="6"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -127,9 +177,57 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onOperator"
-                    android:text="+"
+                    android:text="@string/add"
                     android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="cos"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/parenthesesOpenButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="("
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="x^y"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="ln"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorAccent">
 
@@ -138,7 +236,7 @@
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="80dp"
+                      android:layout_height="50dp"
                       android:orientation="horizontal"
                       android:background="@color/colorWhite">
 
@@ -146,9 +244,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="1"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -157,9 +255,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="2"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -168,9 +266,9 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="3"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
 
             </Button>
@@ -179,18 +277,68 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:text="@string/sub"
+                    android:textSize="20sp"
                     android:onClick="onOperator"
-                    android:text="-"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="tan"
+                    android:textSize="20sp"
+                    android:onClick="onOperator"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+            <Button
+                    android:id="@+id/parenthesesCloseButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text=")"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+            </Button>
+
+
+            <Button
+                    android:id="@+id/backButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/back"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorAccent">
 
             </Button>
 
+
+            <Button
+                    android:id="@+id/allClearButton"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:text="@string/c"
+                    android:textSize="20sp"
+                    android:textColor="@color/colorWhite"
+                    android:background="@color/colorAccent">
+
+            </Button>
+
+
         </LinearLayout>
 
         <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="80dp"
+                      android:layout_height="50dp"
                       android:orientation="horizontal"
                       android:background="@color/colorWhite">
 
@@ -198,13 +346,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:onClick="onDigitClick"
                     android:text="0"
                     android:textSize="20sp"
+                    android:onClick="onDigitClick"
                     android:background="@color/colorWhite">
+
             </Button>
-
-
 
             <Button
                     android:id="@+id/signChange"
@@ -232,83 +379,29 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
+                    android:text="@string/divide"
+                    android:textSize="20sp"
                     android:onClick="onOperator"
-                    android:text="/"
-                    android:textSize="20sp"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorAccent">
 
             </Button>
-
-        </LinearLayout>
-
-        <LinearLayout android:layout_width="match_parent"
-                      android:layout_height="80dp"
-                      android:orientation="horizontal"
-                      android:background="@color/colorWhite">
-
-            <Button
-                    android:id="@+id/parenthesesOpenButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:text="("
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
-
-            </Button>
-
-            <Button
-                    android:id="@+id/parenthesesCloseButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="0.5"
-                    android:text=")"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
-            </Button>
-
-            <Button
-                    android:id="@+id/backButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="back"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
-
-            </Button>
-
-            <Button
-                    android:id="@+id/allClearButton"
-                    android:layout_width="0dp"
-                    android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="C"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
-
-            </Button>
-
 
 
             <Button
                     android:id="@+id/equalButton"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
-                    android:layout_weight="1"
-                    android:text="="
+                    android:layout_weight="4"
+                    android:text="@string/equals"
                     android:textSize="40sp"
                     android:textColor="@color/colorWhite"
                     android:background="@color/colorAccentDark">
 
             </Button>
-
         </LinearLayout>
+
+
 
     </LinearLayout>
 

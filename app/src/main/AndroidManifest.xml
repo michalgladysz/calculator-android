@@ -23,6 +23,9 @@
         <activity android:name=".AdvancedActivity">
         </activity>
 
+        <activity android:name=".AboutActivity">
+        </activity>
+
     </application>
 
 </manifest>

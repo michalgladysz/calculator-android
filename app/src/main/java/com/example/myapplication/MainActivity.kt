@@ -12,6 +12,7 @@ class MainActivity : AppCompatActivity() {
 
         val simpleButton = findViewById<Button>(R.id.simpleButton)
         val advancedButton = findViewById<Button>(R.id.advancedButton)
+        val aboutButton = findViewById<Button>(R.id.aboutButton)
 
         simpleButton.setOnClickListener {
             val intent = Intent(this, SimpleActivity::class.java)
@@ -20,6 +21,11 @@ class MainActivity : AppCompatActivity() {
 
         advancedButton.setOnClickListener {
             val intent = Intent(this, AdvancedActivity::class.java)
+            startActivity(intent)
+        }
+
+        aboutButton.setOnClickListener {
+            val intent = Intent(this, AboutActivity::class.java)
             startActivity(intent)
         }
     }
