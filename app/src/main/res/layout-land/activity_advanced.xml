@@ -20,7 +20,7 @@
 
     <TextView android:id="@+id/resultTextView"
               android:layout_width="match_parent"
-              android:layout_height="100dp"
+              android:layout_height="wrap_content"
               android:text=""
               android:textSize="50sp"
               android:gravity="end"
@@ -43,10 +43,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="7"
+                    android:text="@string/_7"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -54,10 +55,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="8"
+                    android:text="@string/_8"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -65,10 +67,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="9"
+                    android:text="@string/_9"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -80,7 +83,8 @@
                     android:textSize="20sp"
                     android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -88,11 +92,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="sin"
+                    android:text="@string/sin"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -101,11 +106,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="sqrt"
+                    android:text="@string/sqrt"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -113,11 +119,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="x^2"
+                    android:text="@string/pow2"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -125,11 +132,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="log"
+                    android:text="@string/log"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -144,10 +152,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="4"
+                    android:text="@string/_4"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -155,10 +164,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="5"
+                    android:text="@string/_5"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -166,10 +176,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="6"
+                    android:text="@string/_6"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -181,7 +192,8 @@
                     android:textSize="20sp"
                     android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -189,11 +201,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="cos"
+                    android:text="@string/cos"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -202,10 +215,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="("
+                    android:text="@string/openParentheses"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -213,11 +227,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="x^y"
+                    android:text="@string/powY"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -225,11 +240,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="ln"
+                    android:text="@string/ln"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -244,10 +260,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="1"
+                    android:text="@string/_1"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -255,10 +272,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="2"
+                    android:text="@string/_2"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -266,10 +284,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="3"
+                    android:text="@string/_3"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -281,7 +300,8 @@
                     android:textSize="20sp"
                     android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -289,11 +309,12 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="tan"
+                    android:text="@string/tan"
                     android:textSize="20sp"
-                    android:onClick="onOperator"
+                    android:onClick="onOperatorAdvanced"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -302,10 +323,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text=")"
+                    android:text="@string/closeParentheses"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
             </Button>
 
 
@@ -317,7 +339,8 @@
                     android:text="@string/back"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -330,7 +353,8 @@
                     android:text="@string/c"
                     android:textSize="20sp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -346,10 +370,11 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="0"
+                    android:text="@string/_0"
                     android:textSize="20sp"
                     android:onClick="onDigitClick"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -358,9 +383,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="+/-"
+                    android:text="@string/signChange"
                     android:textSize="20sp"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -369,9 +395,10 @@
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1"
-                    android:text="."
+                    android:text="@string/decimal"
                     android:textSize="20sp"
-                    android:background="@color/colorWhite">
+                    android:background="@color/colorWhite"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -383,7 +410,8 @@
                     android:textSize="20sp"
                     android:onClick="onOperator"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccent">
+                    android:background="@color/colorAccent"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
 
@@ -396,7 +424,8 @@
                     android:text="@string/equals"
                     android:textSize="40sp"
                     android:textColor="@color/colorWhite"
-                    android:background="@color/colorAccentDark">
+                    android:background="@color/colorAccentDark"
+                    style="?android:attr/borderlessButtonStyle">
 
             </Button>
         </LinearLayout>

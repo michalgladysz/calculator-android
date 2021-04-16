@@ -2,7 +2,7 @@ package com.example.myapplication
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.os.PersistableBundle
+
 import android.view.View
 import android.widget.Button
 import android.widget.TextView
@@ -10,10 +10,8 @@ import net.objecthunter.exp4j.ExpressionBuilder
 import java.lang.StringBuilder
 import java.math.BigDecimal
 import java.math.BigDecimal.*
-import kotlin.math.exp
 
 class AdvancedActivity : AppCompatActivity() {
-
 
     private lateinit var expressionTextView: TextView
     private lateinit var resultTextView: TextView
@@ -75,6 +73,12 @@ class AdvancedActivity : AppCompatActivity() {
                     lastNumeric = false
                     lastOperator = false
                 }
+                catch (ex: NumberFormatException) {
+                    resultTextView.text = "Error"
+                    stateError = true
+                    lastNumeric = false
+                    lastOperator = false
+                }
             }
         }
 
@@ -88,8 +92,8 @@ class AdvancedActivity : AppCompatActivity() {
         }
 
         allClearButton.setOnClickListener {
-            this.expressionTextView.text = ""
-            this.resultTextView.text = ""
+            expressionTextView.text = ""
+            resultTextView.text = ""
             lastNumeric = false
             stateError = false
             lastDot = false
@@ -100,18 +104,18 @@ class AdvancedActivity : AppCompatActivity() {
 
         backButton.setOnClickListener {
             if (expressionTextView.text.isNotEmpty() && !stateError) {
-                val char = expressionTextView.text.toString().last();
-                if (char == ')') {
+                val ifParenthesesChar = expressionTextView.text.toString().last();
+                if (ifParenthesesChar == ')') {
                     parenthesesClosed = false
-                    openedParentheses++;
+                    openedParentheses++
                 }
-                if (char == '(') {
+                if (ifParenthesesChar == '(') {
                     parenthesesClosed = true
-                    openedParentheses--;
+                    openedParentheses--
                 }
                 expressionTextView.text = expressionTextView.text.substring(0, expressionTextView.text.length - 1)
                 if (expressionTextView.text.length > 1) {
-                    val char = expressionTextView.text.toString().last();
+                    val char = expressionTextView.text.toString().last()
                     if (char == '.') {
                         lastDot = true
                         lastOperator = false
@@ -145,7 +149,7 @@ class AdvancedActivity : AppCompatActivity() {
                 lastOperator = false
                 lastDot = false
                 expressionTextView.text = stringBuilder.toString()
-                openedParentheses++;
+                openedParentheses++
             }
         }
 
@@ -159,7 +163,7 @@ class AdvancedActivity : AppCompatActivity() {
                 lastOperator = false
                 lastDot = false
                 expressionTextView.text = stringBuilder.toString()
-                openedParentheses--;
+                openedParentheses--
                 evaluateToResultTextView()
             }
         }
@@ -179,11 +183,9 @@ class AdvancedActivity : AppCompatActivity() {
                             StringBuilder(expressionTextView.text.toString()).also { it.setCharAt(index, '-') }
                     }
                     if (char == '-') {
-                        if (prevChar == '*' || prevChar == '/' || prevChar == '^' || prevChar == '(') {
-                            stringBuilder =
-                                StringBuilder(expressionTextView.text.toString()).also { it.deleteCharAt(index) }
-                        } else stringBuilder =
-                            StringBuilder(expressionTextView.text.toString()).also { it.setCharAt(index, '+') }
+                        stringBuilder = if (prevChar == '*' || prevChar == '/' || prevChar == '^' || prevChar == '(') {
+                            StringBuilder(expressionTextView.text.toString()).also { it.deleteCharAt(index) }
+                        } else StringBuilder(expressionTextView.text.toString()).also { it.setCharAt(index, '+') }
                     }
                     if (char == '*' || char == '/' || char == '(' || char == ')' || char == '^') {
                         stringBuilder = StringBuilder(expressionTextView.text.toString()).insert(index + 1, "-")
@@ -191,16 +193,18 @@ class AdvancedActivity : AppCompatActivity() {
                 }
                 else {
                     if (expressionTextView.text.isNotEmpty()) {
-                        if (expressionTextView.text.toString().elementAt(0) == '-')
-                            stringBuilder =
-                                StringBuilder(expressionTextView.text.toString()).also { it.deleteCharAt(index) }
-                        else stringBuilder = StringBuilder(expressionTextView.text.toString()).insert(0, "-")
+                        stringBuilder = if (expressionTextView.text.toString().elementAt(0) == '-')
+                            StringBuilder(expressionTextView.text.toString()).also { it.deleteCharAt(index) }
+                        else StringBuilder(expressionTextView.text.toString()).insert(0, "-")
                     }
                 }
                 expressionTextView.text = stringBuilder.toString()
             }
-            if (expressionTextView.text.isNotEmpty())
+            println(expressionTextView.text.length)
+            if (expressionTextView.text.toString() != "null") {
                 evaluateToResultTextView()
+            } else expressionTextView.text = ""
+
         }
     }
 
@@ -264,7 +268,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "sqrt("
                 }
                 else expressionTextView.append("sqrt(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -274,7 +278,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "log("
                 }
                 else expressionTextView.append("log(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -284,7 +288,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "log10("
                 }
                 else expressionTextView.append("log10(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -294,7 +298,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "sin("
                 }
                 else expressionTextView.append("sin(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -304,7 +308,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "cos("
                 }
                 else expressionTextView.append("cos(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -314,7 +318,7 @@ class AdvancedActivity : AppCompatActivity() {
                     expressionTextView.text = "tan("
                 }
                 else expressionTextView.append("tan(")
-                openedParentheses++;
+                openedParentheses++
                 parenthesesClosed = false
                 lastNumeric = false
                 lastOperator = true
@@ -336,8 +340,8 @@ class AdvancedActivity : AppCompatActivity() {
         if ( !lastOperator && ((parenthesesClosed && expressionTextView.text.isNotEmpty()) || (parenthesesClosed && lastNumeric)) && openedParentheses == 0) {
             val txt = expressionTextView.text.toString()
             val expression = ExpressionBuilder(txt).build()
-            val ret = BigDecimal(expression.evaluate())
-            ret.setScale(2, ROUND_CEILING)
+            var ret = BigDecimal(expression.evaluate())
+            ret = ret.setScale(4, ROUND_HALF_UP)
             return ret.toString()
         }
         return ""
